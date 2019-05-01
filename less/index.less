@@ -256,6 +256,19 @@ body {
 				margin-top: 50px;
 			}
 		}
+
+		@media (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+
+			.listen-up {
+				width: 100%;
+			}
+
+			.stuff-im-good-at {
+				.listen-up;
+			}
+		}
 	}
 
 	.bottom-content {
