@@ -303,6 +303,9 @@ body .contact h2 {
 body .contact a {
   margin: 20px;
 }
+body .contact .icon {
+  color: #8f76a8;
+}
 body footer {
   border: none;
   border-radius: 12px;
