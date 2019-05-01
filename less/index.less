@@ -85,13 +85,14 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -104,154 +105,208 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+	display: block;
 }
+
 body {
-  line-height: 1;
+	line-height: 1;
 }
+
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
+
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+	content: "";
+	content: none;
 }
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-  height: 100%;
+	height: 100%;
 }
 
 /* Resume Styling begins here */
 
-header {
-  margin: 0 auto;
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: aliceblue;
-    border-bottom: 1px solid black;
-    border-radius: 12px;
-    padding: 30px;
-    // margin-bottom: 20px;
+@import url("https://fonts.googleapis.com/css?family=Gugi");
 
-    a {
-      text-decoration: none;
-      color: gray;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    }
-  }
-}
+@headerfont: "Gugi", cursive;
+@plainfont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+@purple: #8f76a8;
+@lightpurple: #E8DCF5;
+@lightgreen: #E0FAD5;
 
-.top-content {
-  border: 1px solid black;
-  border-radius: 12px;
-  text-align: center;
-  background-color: beige;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+body {
+	header {
+		margin: 0 auto;
 
-  h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
+		nav {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			background-color: @purple;
+			border-bottom: none;
+			padding: 40px;
+			// margin-bottom: 20px;
 
-  h2 {
-	font-size: 25px;
-	margin-bottom: 10px;
-  }
+			a {
+				font-size: 20px;
+				text-decoration: none;
+				color: white;
+				font-family: @plainfont;
+			}
 
-  img {
-    width: 40%;
-    border-radius: 12px;
-    border: 1px solid black;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+			a:hover {
+				color: #e8dcf5;
+				font-size: 22px;
+			}
+		}
+	}
 
-  button {
-    border: 1px solid black;
-    border-radius: 12px;
-    padding: 10px 20px;
-    margin: 10px;
-  }
+	.top-content {
+		border: none;
+		text-align: center;
+		background-color: @lightpurple;
+		font-family: @plainfont;
 
-  button:hover {
-    background-color: black;
-    color: white;
-  }
-}
+		h1 {
+			font-size: 50px;
+			margin-bottom: 10px;
+			font-family: @headerfont;
+		}
 
-.middle-content {
-  display: flex;
-  border: 1px solid black;
-  border-radius: 12px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+		h2 {
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
 
-  .listen-up {
-    width: 50%;
-    border: 1px solid black;
-    border-radius: 12px;
-    padding: 10px;
+		img {
+			width: 20%;
+			border: 5px solid @purple;
+			border-radius: 300px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
 
-    h1 {
-      font-weight: bolder;
-      text-decoration: underline;
-    }
-  }
+		button {
+			border: 2px solid @purple;
+			background-color: white;
+			border-radius: 12px;
+			padding: 20px 40px;
+			margin: 20px;
+			font-size: 20px;
+		}
 
-  .stuff-im-good-at {
-    .listen-up;
-  }
-}
+		button:hover {
+			background-color: @purple;
+			color: white;
+			border: 2px solid white;
+		}
+	}
 
-.bottom-content {
-  .middle-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+	.middle-content {
+		display: flex;
+		border: none;
+		border-radius: 12px;
+		font-family: @plainfont;
+		background-color: whitesmoke;
 
-  h1 {
-    padding: 10px;
-    font-weight: bolder;
-  }
+		.listen-up {
+			border: 2px solid @purple;
+			width: 50%;
+			border-radius: 12px;
+			padding: 10px;
 
-  table {
-    border: 1px solid black;
+			h1 {
+				font-weight: bolder;
+				text-decoration: underline;
+			}
+		}
 
-    th {
-      border-bottom: 1px solid black;
-      padding: 10px;
-    }
+		.stuff-im-good-at {
+			.listen-up;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
 
-    td {
-      padding: 10px;
-    }
-  }
-}
+			.icon {
+				color: @purple;
+				font-size: 100px;
+				padding: 20px;
+				margin-top: 50px;
+			}
+		}
+	}
 
-footer {
-  border: 1px solid black;
-  border-radius: 12px;
-  padding: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  text-align: center;
+	.bottom-content {
+		.middle-content;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border: 2px solid @purple;
+
+		h1 {
+			padding: 10px;
+			font-weight: bolder;
+		}
+
+		table {
+			border: 2px solid @purple;
+			border-radius: 12px;
+			background-color: white;
+
+			th {
+				border-bottom: 2px solid @purple;
+				color: black;
+				background-color: @lightpurple;
+				padding: 10px;
+			}
+
+			td {
+				padding: 10px;
+			}
+		}
+	}
+
+	.contact {
+		margin: 20px;
+		font-family: @plainfont;
+		text-align: center;
+
+		h2 {
+			font-size: 20px;
+		}
+
+		a {
+			margin: 20px;
+		}
+	}
+
+	footer {
+		border: none;
+		border-radius: 12px;
+		padding: 20px;
+		font-family: @plainfont;
+		text-align: center;
+	}
 }

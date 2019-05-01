@@ -5,9 +5,12 @@
 <head>
   <meta charset="utf-8">
 
-  <title>My Resume</title>
+  <title>&lt;Alexis /&gt; - Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -18,43 +21,50 @@
 
   <header>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
+      <a href="#top">Top</a>
+      <a href="#about">About</a>
       <a href="#">Portfolio</a>
       <a href="#">Contact</a>
     </nav>
   </header>
 
-  <section class="top-content">
+  <section class="top-content" id='top'>
     <img src="me.jpg" alt="my picture">
-    <h1><strong>&lt;Alexis Carr /&gt;</strong> - Web Dev</h1>
+    <h1><strong>&lt;Alexis Carr /&gt;</strong></h1>
     <h2>Technology is my jam!</h2>
     <p>Occassionally, I have time to work on side projects, if you're interested, let me know by signing up on this
       website.</p>
     <button>Let's Team Up</button>
   </section>
 
-  <section class="middle-content">
+  <section class="middle-content" id="about">
     <div class="listen-up">
-      <h1>Listen Up...</h1>
-      <p>
-        Aenean semper ultrices leo, vitae fermentum ante. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Nullam tempus mollis congue. Nulla egestas orci ut tortor feugiat venenatis.
-        Suspendisse ipsum odio, lacinia eget congue ac, consequat vitae quam. Fusce euismod lorem non maximus volutpat.
-        Pellentesque malesuada tellus quis feugiat scelerisque. Nulla suscipit sapien nunc, pellentesque ornare eros
-        mollis non. Ut viverra ex in auctor ullamcorper. Fusce posuere magna congue faucibus rhoncus.
-      </p>
+      <h1>Education</h1>
+      <h2>Lambda School</h2>
+      <h2>April 2019 - present</h2>
+      <h3>Full Stack Web Devlopment and Computer Science</h3>
+      <br>
+      <h2>Texas A&M University</h2>
+      <h2>August 2016 - May 2019</h2>
+      <h3>Master of Science in Medical Sciences</h3>
+      <h3>Concentration: Biomedical Informatics and Data Science</h3>
+      <br>
+      <h2>University of Houston</h2>
+      <h2>August 2011 - May 2016</h2>
+      <h3>Bachelor of Science in Biomedical Engineerng</h3>
+      <h3>Concentration: Biomolecular Engineering</h3>
+      <h3>Minor: Biochemical and Biophysical Sciences</h3>
+
     </div>
 
     <div class="stuff-im-good-at">
-      <h1>Stuff I'm Good At:</h1>
-      <ul>
-        <li>Disc Golf</li>
-        <li>Coding Up UI</li>
-        <li>Playing lots of video games</li>
-        <li>Using bootstrap grid</li>
-        <li>Taking long naps</li>
-      </ul>
+      <!-- <h1>Here's all the stuff I do:</h1> -->
+      
+        <i class="icon fab fa-html5 fa-lg"></i>
+        <i class="icon fab fa-css3-alt fa-lg"></i>
+        <i class="icon fab fa-js-square fa-lg"></i>
+        <i class="icon fab fa-python fa-lg"></i>
+        <i class="icon fab fa-git-square fa-lg"></i>
     </div>
   </section>
 
@@ -62,31 +72,47 @@
     <h1>Work History</h1>
     <table>
       <tr>
-        <th>Yrs</th>
+        <th>Years</th>
         <th>Company</th>
         <th>Title</th>
         <th>Tech Used</th>
       </tr>
       <tr>
-        <td>1</td>
-        <td>Apple</td>
-        <td>Software Engineer</td>
-        <td>Swift</td>
+        <td>October 2018 - present</td>
+        <td>Code for BCS</td>
+        <td>Software Developer (volunteer)</td>
+        <td>Node, Express, Postgres, Twilio, Heroku</td>
       </tr>
       <tr>
-        <td>2</td>
-        <td>Microsoft</td>
-        <td>Computer Scientist</td>
-        <td>.NET</td>
+        <td>August 2017 - May 2018</td>
+        <td>Department of Biomedical Informatics, Texas A&M University</td>
+        <td>Graduate Research Assistant</td>
+        <td>Python, MySQL</td>
       </tr>
       <tr>
-        <td>3</td>
-        <td>Amazon</td>
-        <td>Dev Ops</td>
-        <td>AWS</td>
+        <td>May 2015 - October 2016</td>
+        <td>Department of Molecular & Cellular Medicine, Texas A&M University</td>
+        <td>Undergraduate Research Intern (summers)</td>
+        <td>Molecular Biology</td>
+      </tr>
+      <tr>
+        <td>October 2014 - April 2015</td>
+        <td>Department of Biomedical Engineering, University of Houston</td>
+        <td>Undergraduate Research Intern</td>
+        <td>MATLAB</td>
       </tr>
     </table>
   </section>
+
+  <section class="contact">
+    <h2>I would love to hear from you. Please feel free to reach out!</h2>
+    <br>
+    <a href="https://www.linkedin.com/in/alexis-j-carr-17a20865/"><span class="icon"><i
+            class="fab fa-linkedin fa-3x"></i></span></a>
+    <a href="https://github.com/alexisjcarr"><span class="label icon"><i class="fab fa-github fa-3x"></i></span></a>
+    <a href="acarr59@gmail.com"><span class="label icon"><i class="fas fa-at fa-3x"></i></span></a>
+  </section>
+
   <footer>
     <p>Copyright Awesomeness 2019</p>
   </footer>
