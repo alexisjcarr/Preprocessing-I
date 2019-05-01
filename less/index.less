@@ -257,7 +257,7 @@ body {
 			}
 		}
 
-		@media (max-width: 500px) {
+		@media screen and (max-width: 500px) {
 			display: flex;
 			flex-direction: column;
 
@@ -284,12 +284,13 @@ body {
 		}
 
 		table {
-			border: 2px solid @purple;
-			border-radius: 12px;
+			// border: 2px solid @purple;
+			// border-radius: 12px;
 			background-color: white;
 
 			th {
 				border-bottom: 2px solid @purple;
+				border-top: 2px solid @purple;
 				color: black;
 				background-color: @lightpurple;
 				padding: 10px;
