@@ -1,1 +1,338 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* Resume Styling begins here */
+@font-face {
+  font-family: 'Gugi';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gugi Regular'), local('Gugi-Regular'), url(https://fonts.gstatic.com/s/gugi/v7/A2BVn5dXywshZAmK8A.ttf) format('truetype');
+}
+body header {
+  margin: 0 auto;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #8f76a8;
+  border-bottom: none;
+  padding: 40px;
+}
+body header nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body header nav a:hover {
+  color: #e8dcf5;
+  font-size: 22px;
+}
+body .top-content {
+  border: none;
+  text-align: center;
+  background-color: #E8DCF5;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+body .top-content h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-family: "Gugi", cursive;
+}
+body .top-content h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+body .top-content img {
+  width: 20%;
+  border: 5px solid #8f76a8;
+  border-radius: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body .top-content button {
+  border: 2px solid #8f76a8;
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 40px;
+  margin: 20px;
+  font-size: 20px;
+}
+body .top-content button:hover {
+  background-color: #8f76a8;
+  color: white;
+  border: 2px solid white;
+}
+body .middle-content {
+  display: flex;
+  border: none;
+  border-radius: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: whitesmoke;
+}
+body .middle-content .listen-up {
+  border: 2px solid #8f76a8;
+  width: 50%;
+  border-radius: 12px;
+  padding: 10px;
+}
+body .middle-content .listen-up h1 {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+body .middle-content .stuff-im-good-at {
+  border: 2px solid #8f76a8;
+  width: 50%;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .middle-content .stuff-im-good-at h1 {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+body .middle-content .stuff-im-good-at .icon {
+  color: #8f76a8;
+  font-size: 100px;
+  padding: 20px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 500px) {
+  body .middle-content {
+    display: flex;
+    flex-direction: column;
+  }
+  body .middle-content .listen-up {
+    width: 100%;
+  }
+  body .middle-content .stuff-im-good-at {
+    width: 100%;
+  }
+}
+body .bottom-content {
+  border: none;
+  border-radius: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid #8f76a8;
+}
+body .bottom-content .listen-up {
+  border: 2px solid #8f76a8;
+  width: 50%;
+  border-radius: 12px;
+  padding: 10px;
+}
+body .bottom-content .listen-up h1 {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+body .bottom-content .stuff-im-good-at {
+  border: 2px solid #8f76a8;
+  width: 50%;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body .bottom-content .stuff-im-good-at h1 {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+body .bottom-content .stuff-im-good-at .icon {
+  color: #8f76a8;
+  font-size: 100px;
+  padding: 20px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 500px) {
+  body .bottom-content {
+    display: flex;
+    flex-direction: column;
+  }
+  body .bottom-content .listen-up {
+    width: 100%;
+  }
+  body .bottom-content .stuff-im-good-at {
+    width: 100%;
+  }
+}
+body .bottom-content h1 {
+  padding: 10px;
+  font-weight: bolder;
+}
+body .bottom-content table {
+  background-color: white;
+}
+body .bottom-content table th {
+  border-bottom: 2px solid #8f76a8;
+  border-top: 2px solid #8f76a8;
+  color: black;
+  background-color: #E8DCF5;
+  padding: 10px;
+}
+body .bottom-content table td {
+  padding: 10px;
+}
+body .contact {
+  margin: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}
+body .contact h2 {
+  font-size: 20px;
+}
+body .contact a {
+  margin: 20px;
+}
+body .contact .icon {
+  color: #8f76a8;
+}
+body footer {
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+}

@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,25 +92,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,10 +137,194 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
+/* Resume Styling begins here */
+
+@import url("https://fonts.googleapis.com/css?family=Gugi");
+
+@headerfont: "Gugi", cursive;
+@plainfont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+@purple: #8f76a8;
+@lightpurple: #E8DCF5;
+@lightgreen: #E0FAD5;
+
+body {
+	header {
+		margin: 0 auto;
+
+		nav {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			background-color: @purple;
+			border-bottom: none;
+			padding: 40px;
+			// margin-bottom: 20px;
+
+			a {
+				font-size: 20px;
+				text-decoration: none;
+				color: white;
+				font-family: @plainfont;
+			}
+
+			a:hover {
+				color: #e8dcf5;
+				font-size: 22px;
+			}
+		}
+	}
+
+	.top-content {
+		border: none;
+		text-align: center;
+		background-color: @lightpurple;
+		font-family: @plainfont;
+
+		h1 {
+			font-size: 50px;
+			margin-bottom: 10px;
+			font-family: @headerfont;
+		}
+
+		h2 {
+			font-size: 25px;
+			margin-bottom: 10px;
+		}
+
+		img {
+			width: 20%;
+			border: 5px solid @purple;
+			border-radius: 300px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+
+		button {
+			border: 2px solid @purple;
+			background-color: white;
+			border-radius: 12px;
+			padding: 20px 40px;
+			margin: 20px;
+			font-size: 20px;
+		}
+
+		button:hover {
+			background-color: @purple;
+			color: white;
+			border: 2px solid white;
+		}
+	}
+
+	.middle-content {
+		display: flex;
+		border: none;
+		border-radius: 12px;
+		font-family: @plainfont;
+		background-color: whitesmoke;
+
+		.listen-up {
+			border: 2px solid @purple;
+			width: 50%;
+			border-radius: 12px;
+			padding: 10px;
+
+			h1 {
+				font-weight: bolder;
+				text-decoration: underline;
+			}
+		}
+
+		.stuff-im-good-at {
+			.listen-up;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			.icon {
+				color: @purple;
+				font-size: 100px;
+				padding: 20px;
+				margin-top: 50px;
+			}
+		}
+
+		@media screen and (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+
+			.listen-up {
+				width: 100%;
+			}
+
+			.stuff-im-good-at {
+				.listen-up;
+			}
+		}
+	}
+
+	.bottom-content {
+		.middle-content;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border: 2px solid @purple;
+
+		h1 {
+			padding: 10px;
+			font-weight: bolder;
+		}
+
+		table {
+			// border: 2px solid @purple;
+			// border-radius: 12px;
+			background-color: white;
+
+			th {
+				border-bottom: 2px solid @purple;
+				border-top: 2px solid @purple;
+				color: black;
+				background-color: @lightpurple;
+				padding: 10px;
+			}
+
+			td {
+				padding: 10px;
+			}
+		}
+	}
+
+	.contact {
+		margin: 20px;
+		font-family: @plainfont;
+		text-align: center;
+
+		h2 {
+			font-size: 20px;
+		}
+
+		a {
+			margin: 20px;
+		}
+
+		.icon {
+			color: @purple;
+		}
+	}
+
+	footer {
+		border: none;
+		border-radius: 12px;
+		padding: 20px;
+		font-family: @plainfont;
+		text-align: center;
+	}
+}
